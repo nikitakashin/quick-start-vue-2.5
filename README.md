@@ -12,7 +12,7 @@ Advantages:
 # Installation
 ``` bash
 git clone https://github.com/nikitakashin/quick-start-vue-2.5.git
-quick-start-vue-2.5
+cd quick-start-vue-2.5
 npm i
 ```
 

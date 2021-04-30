@@ -7,6 +7,13 @@ Advantages:
 4. Has basic template with Navbar, Footer and router-view components.
 5. Responsive layout.
 
+
+# Installation
+``` bash
+git clone https://github.com/nikitakashin/quick-start-vue-2.5.git
+npm i
+```
+
 ## Local dev server
 
 ``` bash

@@ -22,7 +22,7 @@ npm run build
 ## Build Setup with Docker
 
 ``` bash
-docker build . -t asap
-docker run -it -p 8080:8080 asap
+docker build . -t projectname
+docker run -it -p 8080:8080 projectname
 ```
 

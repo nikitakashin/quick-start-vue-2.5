@@ -3,7 +3,7 @@
     <v-app>
       <Header />
       <v-main>
-        <router-view></router-view>
+        <router-view />
       </v-main>
       <Footer />
     </v-app>
@@ -17,26 +17,11 @@ import Footer from './components/Layout/Footer'
 
 export default {
   name: 'app',
+
   components: {
     Header,
     Footer,
 
-  },
-  data() {
-    return {
-
-    }
-  },
-  methods: {
-
-  },
-  mounted() {
-
-  },
-  computed: {
-    ...mapGetters([
-
-    ]),
   }
 }
 
@@ -59,9 +44,11 @@ body {
   position: relative;
   overflow-x: hidden;
 }
+
 .container {
   padding-top: 0px;
 }
+
 .bounce-enter-active {
   animation: bounce-in 1.5s;
 }
@@ -75,9 +62,6 @@ body {
   }
 }
 
-
-//полоса прокрутки
-/* Let's get this party started */
 ::-webkit-scrollbar {
   width: 0px;
 }

@@ -52,36 +52,17 @@
 </template>
 
 <script>
-import { mapActions, mapGetters } from "vuex";
-
 export default {
   name: "EpisodeCard",
-  components: {
 
-  },
-  methods: {
-    ...mapActions([
+  props: ['episode'],
 
-    ]),
-  },
-  computed: {
-    ...mapGetters([
-
-    ]),
-  },
   data() {
     return {
       loading: false,
       selection: 0,
     };
-  },
-  props: ['episode'],
-  mounted() {
-
-  },
-  beforeMount() {
-
-  },
+  }
 };
 </script>
 

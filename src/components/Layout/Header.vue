@@ -1,13 +1,7 @@
 <template>
   <v-card class="header">
-    <v-toolbar
-      dark
-      color="purple"
-    >
-      <v-btn
-        icon
-        dark
-      >
+    <v-toolbar dark color="purple">
+      <v-btn icon dark>
         <v-icon>mdi-menu</v-icon>
       </v-btn>
       <v-toolbar-title>Breaking bad</v-toolbar-title>
@@ -19,29 +13,8 @@
 </template>
 
 <script>
-import {mapGetters, mapActions} from 'vuex'
-
 export default {
-  name: "Header",
-  components: {
-
-  },
-  data: () => ({
-
-  }),
-  methods: {
-    ...mapActions([
-
-    ]),
-  },
-  computed: {
-    ...mapGetters([
-
-    ]),
-  },
-  mounted() {
-
-  },
+  name: "Header"
 }
 </script>
 

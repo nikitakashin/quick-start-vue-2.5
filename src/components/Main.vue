@@ -1,6 +1,5 @@
 <template>
 <div>
-
   <v-sheet elevation="6" rounded>
     <v-tabs
       background-color="cyan"
@@ -42,9 +41,7 @@
         v-for="episode in EPISODES_BY_SEASON"
         :key="episode.episode_id"
       >
-        <EpisodeCard
-          v-bind:episode="episode"
-        ></EpisodeCard>
+        <EpisodeCard v-bind:episode="episode" />
       </div>
     </v-row>
   </v-container>
@@ -61,19 +58,17 @@ import EpisodeCard from './Layout/EpisodeCard'
 
 export default {
   name: "Main",
-  components: {
-    EpisodeCard,
-  },
-  data() {
-    return {
 
-    };
+  components: {
+    EpisodeCard
   },
+
   methods: {
     ...mapActions([
       'GET_ALL_EPISODES',
       'OPEN_SEASON',
     ]),
+
     getSeasons: function(episodes) {
     // Возвращает количество список сезонов
       let seasons = [];
@@ -85,18 +80,17 @@ export default {
       return seasons
     },
   },
+
   computed: {
     ...mapGetters([
       'EPISODES',
       'EPISODES_BY_SEASON',
     ]),
   },
-  mounted() {
-    
-  },
+
   beforeMount() {
     this.GET_ALL_EPISODES();
-  },
+  }
 };
 </script>
 
@@ -105,6 +99,7 @@ export default {
   padding-left: 5px;
   padding-right: 5px;
 }
+
 .my_divider {
   margin-top: 40px;
   border-color: rgba(0,0,0,0.0);

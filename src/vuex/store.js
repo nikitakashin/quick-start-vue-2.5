@@ -11,8 +11,6 @@ Vue.use(Vuex);
 const BASE_URL = 'https://www.breakingbadapi.com/api/';
 
 let store = new Vuex.Store({
-
-
   state: {
     episodes: [],
     episodes_by_season: [],
@@ -22,6 +20,7 @@ let store = new Vuex.Store({
     PUT_ALL_EPISODES_TO_STATE: (state, episodes) => {
       state.episodes = episodes;
     },
+
     PUT_ALL_EPISODES_OF_SEASON_TO_STATE: (state, season) => {
       let list = [];
       for (let episode of state.episodes) {
@@ -46,6 +45,7 @@ let store = new Vuex.Store({
         return error;
       })
     },
+
     OPEN_SEASON({commit}, season) {
       commit('PUT_ALL_EPISODES_OF_SEASON_TO_STATE', season);
     }
@@ -55,6 +55,7 @@ let store = new Vuex.Store({
     EPISODES(state) {
       return state.episodes;
     },
+
     EPISODES_BY_SEASON(state) {
       return state.episodes_by_season;
     }
